@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guess the Animal</title>
+
+<style>
+
+body{
+background-color: rgb(214,214,158);
+text-align:center;
+font-family: Arial;
+}
+
+h1{
+color: rgb(3,69,3);
+}
+
+.image-box{
+width:300px;
+height:200px;
+overflow:hidden;
+margin:auto;
+border:3px solid darkgreen;
+border-radius:10px;
+}
+
+.image-box img{
+width:500px;
+margin-left:-100px;
+margin-top:-50px;
+}
+
+input{
+padding:8px;
+font-size:16px;
+margin-top:15px;
+}
+
+button{
+padding:10px 18px;
+background-color:darkgreen;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin:5px;
+}
+
+#message{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+}
+
+#score{
+margin-top:10px;
+font-size:22px;
+color:darkgreen;
+font-weight:bold;
+}
+.nav{
+    background-color: rgb(165, 165, 109);
+    text-align: center;
+    padding: 15px;
+}
+
+.nav a{
+    display: inline-block;
+    background-color: #5b1010;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 7px;
+}
+
+</style>
+
+<script>
+
+let animals = [
+
+{name:"lion",img:"https://www.shutterstock.com/image-photo/ear-closeup-lion-fur-mane-260nw-2224218467.jpg"},
+{name:"dog",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfEJ77TCnMkpDbbX_O-1tQl8f6MMS9JPaeWw&s"},
+{name:"cat",img:"https://www.shutterstock.com/image-photo/take-blurry-photos-black-cats-260nw-2174275101.jpg"},
+{name:"tiger",img:"https://media.gettyimages.com/id/1371283060/photo/close-up-shot-showing-the-body-of-a-tiger-eastern-cape-south-africa.jpg?s=612x612&w=gi&k=20&c=FtCbC0oMNNay5JftIMo9rRGQa1FiFEWcyjcuqi_C2jo="},
+{name:"elephant",img:"https://www.shutterstock.com/image-photo/backside-african-elephant-ear-latticed-260nw-1832481952.jpg"},
+{name:"penguin",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYbyLpBJmFLVvGVRwDUGdDZ3SDRRwo8-l2-g&s"},
+{name:"monkey",img:"https://www.shutterstock.com/image-photo/monkey-blurred-unfocused-background-zoo-260nw-1918877936.jpg"}
+
+];
+
+let index = 0;
+let score = 0;
+
+function showAnimal(){
+
+if(index >= animals.length){
+
+document.getElementById("message").innerHTML = "🎉 Game Finished!";
+document.getElementById("score").innerHTML = "Final Score: " + score + " / " + animals.length;
+
+document.querySelector(".image-box").style.display="none";
+document.getElementById("guess").style.display="none";
+document.getElementById("submitBtn").style.display="none";
+document.getElementById("nextBtn").style.display="none";
+
+return;
+
+}
+
+document.getElementById("animalImage").src = animals[index].img;
+
+document.getElementById("guess").value="";
+document.getElementById("message").innerHTML="";
+
+}
+
+function checkAnimal(){
+
+let guess = document.getElementById("guess").value.toLowerCase().trim();
+
+if(guess === ""){
+document.getElementById("message").innerHTML="⚠ Please enter an answer";
+return;
+}
+
+if(guess === animals[index].name){
+
+score++;
+
+document.getElementById("message").innerHTML="✅ Correct!";
+document.getElementById("message").style.color="green";
+
+}else{
+
+document.getElementById("message").innerHTML="❌ Wrong!";
+document.getElementById("message").style.color="red";
+
+}
+
+}
+
+function nextAnimal(){
+
+index++;
+
+showAnimal();
+
+}
+
+</script>
+
+</head>
+
+<body onload="showAnimal()">
+     <div>
+          <header class="nav">
+        <a href="index.html">HOME PAGE</a>
+         <a href="Gallery.html">GALLERY</a>
+        <a href="Animals.html">ANIMALS</a>
+        <a href="facts.html">FACTS</a>
+        <a href="endangered.html">ENDANGERED SPECIES</a>
+        <a href="Volunteers.html">VOLUNTEER REGISTRATION FOR  ANIMAL SHELTERS</a>
+        <a href="About.html">ABOUT</a>
+        <a href="Contact.html">CONTACT</a>
+          </header>
+    <div>
+
+<h1>🐾 Guess the Animal</h1>
+
+<p>Look at the image and guess the animal.</p>
+
+<div class="image-box">
+<img id="animalImage">
+</div>
+
+<br>
+
+<input type="text" id="guess" placeholder="Enter animal name">
+
+<br><br>
+
+<button id="submitBtn" onclick="checkAnimal()">Submit</button>
+
+<button id="nextBtn" onclick="nextAnimal()">Next Animal</button>
+
+<p id="message"></p>
+
+<p id="score"></p>
+
+</body>
+</html>
