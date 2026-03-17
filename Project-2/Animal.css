@@ -1,0 +1,196 @@
+body{
+    background-color: rgb(214, 214, 158);
+}
+h1{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color:rgb(3, 69, 3);
+}
+hr{
+     border: 1px solid black;
+}
+p{
+   color: rgb(36, 129, 36);
+   font-size: large;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-weight: 550;
+    margin-bottom: 15px;
+}
+.p2{
+    color: rgb(36, 129, 36);
+   font-size: large;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: 550;
+    margin-bottom: 15px;
+}
+.image1{
+      width: 100%;
+      height: 370px; 
+     margin-top: 10px;
+}
+.nav{
+    background-color: rgb(165, 165, 109);
+    text-align: center;
+    padding: 15px;
+}
+button{
+padding:10px 20px;
+background-color:darkgreen;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+.nav a{
+    display: inline-block;
+    background-color: #5b1010;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 7px;
+}
+#animals {
+    padding: 30px;
+    text-align: center;
+     padding-top: 20px;
+}
+
+.animal-categories {
+    margin-top: 20px;
+    text-align:center;
+}
+
+.animal-link {
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    background-color: #6b8e23;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.animal-link:hover {
+    background-color: #556b2f;
+}
+h2{
+    color:#607f22;
+}
+li{
+    font-size: large;
+    color: rgb(29, 83, 29);
+    font-weight:550;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.pht{
+    padding: 15px;
+    text-align: left;
+    text-decoration: underline;
+    padding-left: 0;
+    margin-bottom:auto;
+    color:#334809
+}
+.photo{
+    text-align:center;  
+}
+.photo a{
+    padding:10px;  
+    margin:auto;    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    text-decoration: none;
+    margin:20px;
+    padding:10px;
+    background-color:rgb(119, 59, 59);
+    border-radius: 6px;
+}
+.frans{
+    color: rgb(43, 108, 43);
+}
+.h2{
+    color:#49670e;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.Volunteers-form{
+    margin-top: auto;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(11, 105, 33);
+    text-align:center;
+}
+.vol {
+    text-align: center;
+}
+.vol h1 {
+  margin-bottom: 10px;  
+}
+
+.vol a {
+  display: inline-block;
+  margin-top: 0;         
+}
+h3{
+    font-size: 17px;
+     color:#1b780f;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.endangered-table {
+  width: 85%;
+  margin: 25px auto;
+  border-collapse: collapse;
+  font-size: 18px;  
+}
+.endangered-table th,
+.endangered-table td {
+  border: 2px solid #2f5d2f;
+  padding: 12px;
+  text-align: center;
+}
+
+.endangered-table th {
+  background-color: #1f4324;
+  color: white;
+  font-size: 19px;  
+}
+
+.endangered-intro {
+  font-size: 18px;
+  width: 80%;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+.bt{
+    border-radius: 8px;
+    display: block;
+    margin-left: 0 auto;
+}
+.en{
+     display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 10px;
+  margin-top: 20px;
+}
+.en img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+}
